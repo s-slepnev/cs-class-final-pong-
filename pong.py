@@ -1,5 +1,5 @@
 #sasha slepnev
-#pong, the shooter IS scrapped, i'm focusing all my efforts on this, basically to try to make the best iteration of this i can
+#pong
 from cmu_graphics import*
 import random
 
@@ -249,5 +249,6 @@ def onMousePress(x, y):
         
 #show menu on start
 showMenu()
+
 
 cmu_graphics.run()
