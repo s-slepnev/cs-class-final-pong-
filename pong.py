@@ -250,5 +250,4 @@ def onMousePress(x, y):
 #show menu on start
 showMenu()
 
-
 cmu_graphics.run()
