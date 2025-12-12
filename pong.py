@@ -31,7 +31,8 @@ centerline = Line(625,900,625,0, fill = 'white', dashes = True, visible = False)
 
 counter2 = Label(score2,500,25,fill = 'white', size = 40, visible = False)
 counter1 = Label(score,750,25, fill = 'white', size = 40, visible = False)
-missLabel = Label(misses,625,60, fill = 'white', size = 40, visible = False)
+missLabel = Label(misses,265,25, fill = 'white', size = 40, visible = False)
+missText = Label("Total misses:",125,25, fill = 'white', size = 40, visible = False )
 
 gameOverLabel = Label('GAME OVER', 625, 400, size = 90, fill = "red", visible = False)
 retryBtn = Rect(450, 500, 350, 70, fill="lightgray", visible=False)
@@ -40,7 +41,8 @@ retryLabel = Label("Retry Level", 625, 535, size=35, fill="black", visible=False
 menuBtn = Rect(450, 600, 350, 70, fill="lightgray", visible=False)
 menuLabel = Label("Choose Level", 625, 635, size=35, fill="black", visible=False)
 
-title = Label("SELECT YOUR LEVEL", 625, 200, size=70, fill='black')
+REALtitle = Label("WELCOME TO PONG!",625, 150, size = 90, fill='black', visible = False)
+title = Label("SELECT YOUR LEVEL", 625, 290, size=65, fill='black')
 
 easyBtn = Rect(450, 350, 350, 70, fill='lightgray')
 easyLabel = Label("EASY", 625, 385, size=35, fill='black')
@@ -54,15 +56,16 @@ hardLabel = Label("HARD", 625, 585, size=35, fill='black')
 #show/hide game functions
 def showGame():
     for obj in [bg, me, target, ball, centerline,
-                counter1, counter2, missLabel]:
+                counter1, counter2, missLabel, missText]:
         obj.visible = True
 
 def hideGame():
     for obj in [bg, me, target, ball, centerline,
-                counter1, counter2, missLabel]:
+                counter1, counter2, missLabel, missText]:
         obj.visible = False
 
 def showMenu():
+    REALtitle.visible = True
     title.visible = True
     easyBtn.visible = True
     easyLabel.visible = True
@@ -72,6 +75,7 @@ def showMenu():
     hardLabel.visible = True
 
 def hideMenu():
+    REALtitle.visible = True
     title.visible = False
     easyBtn.visible = False
     easyLabel.visible = False
